@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+ jenkins:
+   image: jenkins:latest
+   container_name: jenkins
+   ports:
+   - target: 8080
+     protocol: tcp
+     published: 8080
+   volumes:
+   - type: volume
+     source: jenkins
+     target: /var/jenkins_home
+ volumes:
+   jenkins:     
